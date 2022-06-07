@@ -1,5 +1,5 @@
 ## Checkout Here 
-xteditorbynaman.netlify.app
+Open [texteditorbynaman.netlify.app](texteditorbynaman.netlify.app)
 
 # Getting Started with Create React App
 
