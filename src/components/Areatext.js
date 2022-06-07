@@ -112,7 +112,7 @@ export default function Areatext(props) {
           words and {text.length} characters.
 
         </p>
-        <p>{count>0?"No of Abusive Words are "+count:""}</p>
+        <p>{count>0?`No of Abusive Words are ${count}`:""}</p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text : "Nothing to preview!"}</p>
       </div>
