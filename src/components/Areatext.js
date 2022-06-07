@@ -98,7 +98,7 @@ export default function Areatext(props) {
           className="btn btn-primary my-3 mx-3"
           onClick={checkWords}
         >
-          Check Words
+          Check Abusive Words
         </button>
       </div>
       <div className="container my-3">
@@ -112,7 +112,7 @@ export default function Areatext(props) {
           words and {text.length} characters.
 
         </p>
-        <p>No of False Words are {count}</p>
+        <p>No of Abusive Words are {count}</p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text : "Nothing to preview!"}</p>
       </div>
