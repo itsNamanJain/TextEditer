@@ -2,17 +2,24 @@ import React, { useState } from "react";
 import FalseWords  from "./Falsewords";
 export default function Areatext(props) {
   const [count,setCount]=   useState(0);
+  const [AbusiveWords,setAbusiveWords]=   useState([]);
 
-  // let ListofWords = ["Hello","Bye","Good", "Desk"];
-  // let count=0;
+ function removeDuplicates(arr) {
+        return arr.filter((item,
+            index) => arr.indexOf(item) === index);
+    }
   const checkWords=()=>{
-    setCount();
+//     setCount();
+    let arr = [];
     let words = text.split(" ");
     let ct=0;
     for(let i=0;i<words.length;i++){
-      if(FalseWords.includes(words[i].toLowerCase()))
+      if(FalseWords.includes(words[i].toLowerCase())){
+        arr.push(words[i]);
       ct++;
+      }
     }
+    setAbusiveWords(removeDuplicates(arr))
     setCount(ct)
   }
   const UpperCase = () => {
@@ -112,7 +119,7 @@ export default function Areatext(props) {
           words and {text.length} characters.
 
         </p>
-        <p>{count>0?`No of Abusive Words are ${count}`:""}</p>
+        <p>{count>0?`No of Abusive Words are ${count} and they are ${AbusiveWords}`:""}</p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text : "Nothing to preview!"}</p>
       </div>
